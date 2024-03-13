@@ -48,8 +48,19 @@ const cantores = [
 
 //iniciar lista que contem a qtd de albuns de cada cantor
 //usar filter
+const listaCantores = albuns.map((album)=> album.cantor)
 
-const qtdAlbunsPorCantor = []
-    .filter(a => a.cantor == )
+const contagemPorCantor = albuns.reduce((resultado, album) => {
+  const cantor = album.cantor;
+  if (resultado[cantor]) {
+    resultado[cantor]++;
+  } else {
+    resultado[cantor] = 1;
+  }
+  return resultado;
+}, {});
+
+console.log(contagemPorCantor);
+console.log(listaCantores)
 
 //gerar outra lista com os nomes dos cantores
