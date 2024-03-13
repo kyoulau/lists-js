@@ -44,4 +44,16 @@ const cantores = [
 ];
 
 //6. Crie uma lista de álbuns ordenada por ano. Não altere a lista original de albuns
-listaOrdenada = albuns.sort()
+albuns.sort((x,y)=>{
+    return x.ano - y.ano;
+  
+  });
+  
+  console.table(albuns)
+  
+  listaNova = Object.entries(albuns);
+  listaNova.sort((a, b) => a[1] - b[1]);
+  
+  console.log(listaNova)
+
+  
